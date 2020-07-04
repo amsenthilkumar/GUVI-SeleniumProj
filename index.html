@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Html CRUD with Pure JavaScript
+    </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                    <div>
+                        <label>FULL NAME*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
+                        <input type="text" name="fullName" id="fullName">
+                    </div>
+                    <div>
+                        <label>EMP CODE</label>
+                        <input type="text" name="empCode" id="empCode">
+                    </div>
+
+                    <div>
+                        <label>SALARY</label>
+                        <input type="text" name="salary" id="salary">
+                    </div>
+                    <div>
+                        <label>CITY</label>
+                        <input type="text" name="city" id="city">
+                    </div>
+
+                    <div >
+                        <label>MALE</label> 
+                        <input name="sex" value="male" type="radio" id ="gender" /> 
+                        <br />
+                    
+                    
+                        <label>FEMALE</label> 
+                        <input name="sex" value="female" type="radio" name ="gender" />
+                        <br />
+                    </div>
+                    <br />
+                    <div>
+                        <label>DATE</label>
+                        <input name="date" type="date" id="date" />
+                        <br />
+                    </div>
+                    <br />
+                    <div>
+                        <label>Are you a FRESHER: </label>
+                        <input name="web-developer" type="checkbox" id ="checkbox"/>
+                        <br />
+                    </div>
+                    <br />
+                    <div>
+                        <select name="favourite-web-language" multiple="multiple" id ="select">
+                            <option>HTML</option>
+                            <option>CSS</option>
+                            <option>JavaScript</option>
+                        </select>
+                        <br />
+                    </div>
+                    
+                    <div>
+                        <br />
+                        <label>Your favourite color:</label>
+                        <input name="favourite-color" type="color" id  ="color" />
+                        <br />
+
+                    </div>
+
+                    
+                    <div  class="form-action-buttons">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="employeeList">
+                    <thead>
+                        <tr>
+                            <th>FULL NAME</th>
+                            <th>EMP CODE</th>
+                            <th>GENDER</th>
+                            <th>SALARY</th>
+                            <th>CITY</th>
+                            <th>DATE</th>
+                            <th>FRESHER</th>
+                            <th>FAVOURITE SUBJECT</th>
+                            <th>COLOUR</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+
+</html>
